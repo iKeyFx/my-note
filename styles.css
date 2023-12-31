@@ -155,7 +155,7 @@ header {
     width: 16px;
     height: 16px;
 }
-.note_del img {
+.note_del i {
     margin: 8px;
     width: 16px;
     height: 16px;
@@ -355,14 +355,15 @@ textarea:focus {
         padding: 0px 50px 62px 50px;
         overflow-x: hidden;
     }
-    .note_con {
-    }
     .note_inner {
         width: 280px;
         height: 280px;
     }
     .note_tools {
         margin-left: 5.2rem;
+    }
+    .note_up {
+        font-size: 15px;
     }
   }
   @media screen and (max-width: 900px) {
@@ -408,7 +409,7 @@ textarea:focus {
         width: 12px;
         height: 12px;
     }
-    .note_del img {
+    .note_del i {
         width: 12px;
         height: 12px;
     }

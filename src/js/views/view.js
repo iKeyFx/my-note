@@ -28,7 +28,7 @@ export const generateNote = function(data) {
                 <input class="note_edit" type="color" id=${data.id}>
             </div>
             <div class="note_del" id=${data.id}>
-                <img src="src/images/trash.svg" alt="">
+            <i class="fa-solid fa-trash-can"></i>
             </div>
         </div>
     </div>
@@ -39,7 +39,7 @@ export const generateNote = function(data) {
 } 
 
 export const generateAllNote = function(data) {
-    
+
     const reversedData = data.reverse();
     const html = reversedData.map((el) => {
         const monthName = month[el.title.slice(5,7) - 1];
@@ -61,7 +61,7 @@ export const generateAllNote = function(data) {
                     <input class="note_edit" type="color" id=${el.id}>
                 </div>
                 <div class="note_del" id=${el.id}>
-                    <img src="src/images/trash.svg" alt="">
+                <i class="fa-solid fa-trash-can"></i>
                 </div>
             </div>
         </div>

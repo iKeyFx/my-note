@@ -66,9 +66,6 @@ header {
     background-color: #CCD3F1;
 }
 /* Disable  */
-/* .btn_add-note:disabled {
-    background-color: #999DAA;
-} */
 .add_note--btn:disabled {
     background-color: #999DAA;
 }
@@ -96,9 +93,9 @@ header {
     padding: 36px 24px;
     background-color: #FCD2F8;
     position: relative;
+    overflow-wrap: break-word;
 }
 .note_up {
-    /* margin-bottom: 128px; */
     color: var(--cl--black);
     font-size: 16px;
     font-family: 'DM Sans', sans-serif;

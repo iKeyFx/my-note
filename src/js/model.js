@@ -21,7 +21,7 @@ export const store = {
         };
       });
     } catch (err) {
-     console.log(err)
+      throw err
     }
   };
 //   Post New Note 
@@ -40,7 +40,7 @@ export const store = {
 
         view.generateNote(data)
     } catch (err) {
-      console.log(err)
+     throw err
     }
   };
 //   Delete Note 
@@ -51,7 +51,7 @@ export const store = {
         }
       ).then((res) => res.json());
     } catch (err) {
-     console.log(err)
+    throw err
     }
   };
 
@@ -74,6 +74,6 @@ export const changeNoteBackground = async function (id, backgroundColor) {
       noteElement.style.backgroundColor = data.backgroundColor;
     }
     } catch (err) {
-     console.log(err)
+    throw err
     }
   };

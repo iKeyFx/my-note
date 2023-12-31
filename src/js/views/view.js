@@ -25,7 +25,7 @@ export const generateNote = function(data) {
         </div>
         <div class="note_tools">
             <div class="note_color" id=${data.id}>
-                <input class="note_edit" type="color" id=${data.id}>
+                <input class="note_edit" type="color" value="${data.backgroundColor}" id=${data.id}>
             </div>
             <div class="note_del" id=${data.id}>
             <i class="fa-solid fa-trash-can"></i>
@@ -58,7 +58,7 @@ export const generateAllNote = function(data) {
             </div>
             <div class="note_tools">
                 <div class="note_color">
-                    <input class="note_edit" type="color" id=${el.id}>
+                    <input class="note_edit" type="color" value="${el.backgroundColor}" id=${el.id}>
                 </div>
                 <div class="note_del" id=${el.id}>
                 <i class="fa-solid fa-trash-can"></i>

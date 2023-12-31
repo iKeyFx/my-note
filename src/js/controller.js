@@ -3,22 +3,17 @@ import * as view from "./views/view.js"
 // Element 
 const noteAddedSuccessful = document.querySelector('.note_added--container')
 const addNoteContainer = document.querySelector('.add_note--container')
-export const noNoteHolder = document.querySelector('.no_note--holder')
 const closeNoteBtn = document.querySelector('.new_note--close')
 const addCompleteBtn = document.querySelector('.add_note--btn')
 const inputFieldCl = document.querySelector('.clear_note--btn')
 const addNewNoteBtn = document.querySelector('.btn_add-note')
-export const addNoteTextArea = document.querySelector('.textarea')
+const noteInputColor = document.querySelector('.note_edit')
 const headerTag = document.getElementById('header')
 const overLay = document.querySelector('.overlay')
-const noteInputColor = document.querySelector('.note_edit')
 export const noteInner = document.querySelector('.note_inner')
+export const addNoteTextArea = document.querySelector('.textarea')
+export const noNoteHolder = document.querySelector('.no_note--holder')
 // Event
-// noteInputColor.addEventListener('click', () => {
-//   console.log(noteInputColor.value)
-//   noteInner.style.backgroundColor = `${noteInputColor.value}`
-// })
-
 addNewNoteBtn.addEventListener('click', () => {
     OpenAddNewNoteBtn()
     ChecktextArea()

@@ -350,7 +350,17 @@ textarea:focus {
     backdrop-filter: blur(0.01px);
     z-index: 5;
   }
-  
+  @media screen and (min-width: 920px) and (max-width: 1200px) {
+    .note_inner {
+        width: 235px;
+        height: 235px;
+        padding: 23px 17px;
+        background-color: #FCF5D2;
+    }
+    .note_tools {
+        margin-left: 3rem;
+    }
+  }
   @media screen and (max-width: 900px) {
     body {
         padding: 0px 0px 62px 0px;

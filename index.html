@@ -1,0 +1,121 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+       <!-- FontAwesome  -->
+       <!-- <script src="https://kit.fontawesome.com/d3ffad999e.js" crossorigin="anonymous"></script> -->
+
+     <link rel="stylesheet" href="styles.css">
+
+    <script type="module" src="src/js/controller.js"></script>
+    <!-- <script type="module" src="src/js/script.js"></script> -->
+    <title>Notepad</title>
+</head>
+<body>
+    <header id="header">
+        <div class="head_div">
+            <div class="my_logo">My Notes</div>
+            <div class="btn_add-note">
+                <span>
+                    <img src="src/images/add.svg" alt="add sign">
+                </span>
+                 Add a new note
+                </div>
+        </div>
+    </header>
+    <main>
+        <div class="no_note--holder">
+            <h3>Your Note is empty, Click Add a New Note to create note</h3>
+        </div>
+        <div class="container">
+            <!-- color Con  -->
+            <div class="note_con">
+
+               <!-- <div class="note_inner">
+                    <div class="note_up">
+                     <div class="note_text">
+                        <p>This is the beginning of mastering CSS, take your time to follow all the tasks; see you on the other side of greatness</p>
+                     </div>
+                    </div>
+                    <div class="note_down">
+                        <div class="note_date">
+                            <div class="d_month">Dec</div>
+                            <div class="d_day">24,</div>
+                            <div class="d_year">2022</div>
+                        </div>
+                        <div class="note_tools">
+                            <div class="note_edit"><img src="src/images/brush.svg" alt=""></div>
+                            <div class="note_del">
+                                <img src="src/images/trash.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+                <!-- Delete note Pop -->
+                <div class="deleteCon hidden">
+                    <div class="deleteInfo">
+                        <div class="deleteConfirm">
+                            <p>Are you sure about this?</p>
+                        </div>
+                        <div class="ConfirmDelete">
+                            <p class="delYes">YES</p>
+                            <p class="delNo">NO</p>
+                        </div>
+                    </div>
+                </div>
+         </div>
+
+        <!-- Add new Note page  -->
+        <div class="add_note--container hidden">
+            <div class="add_note--con">
+                <div class="add_note--head">
+                    <div class="new_note--cap">Add a new note</div>
+                    <div class="new_note--close">
+                        <img src="src/images/icon-close-menu.svg" alt="close">
+                    </div>
+                </div>
+                <div class="add_note--textfield">
+                   
+                    <form action=""> 
+                        <p>min char= 50 || max = 240</p>
+                    <textarea name="" class="textarea" placeholder="Type a new note" maxlength="240"></textarea>
+                            <div class="clear_note--btn"> 
+                                <div class="clear-svg"><img src="src/images/Frame 189.svg" alt="clear-svg"></div> 
+                                <div class="clear-text">Clear</div> 
+                            </div>
+                    </form>
+                </div>
+                <button class="add_note--btn">Add note</button>
+            </div>
+        </div>
+        <!-- input -->
+        <!-- <input type="color"> -->
+        <!-- <img src="src/images/brush.svg" alt=""> -->
+        <!-- Overlay  -->
+        <div class="overlay hidden"></div>
+        <!-- Note Added Successfully Page  -->
+
+        <div class="note_added--container hidden">
+            <div class="note_added--con">
+                <div class="note_added--cover">
+                    <div class="icon_note--added">
+                        <div class="icon_note--done">
+                            <img src="src/images/tick done.gif" alt="tick">
+                        </div>
+                        <div class="note_added--circle">
+                            <img src="src/images/Tick 1.png" alt="done">
+                        </div>
+                    </div>
+                    <p>Note added successfully</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

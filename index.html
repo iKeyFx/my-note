@@ -50,9 +50,14 @@
                             <div class="d_year">2022</div>
                         </div>
                         <div class="note_tools">
-                            <div class="note_edit"><img src="src/images/brush.svg" alt=""></div>
+                                <div class="note_color">
+                                    <div class="color_picker_trigger">
+                                         <img src="src/images/brush.svg" alt="">
+                                    </div>
+                                    <input class="note_edit" type="color" value="${el.backgroundColor}" id=${el.id}>
+                                </div>
                             <div class="note_del">
-                                <img src="src/images/trash.svg" alt="">
+                                <i class="fa-solid fa-trash-can"></i>
                             </div>
                         </div>
                     </div>

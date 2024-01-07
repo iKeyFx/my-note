@@ -9,8 +9,8 @@ export const store = {
   //Note Generator
   export const noteGen = async function () {
     try {
-      const data = await fetch( `${API}`)
-      .then((res) => res.json());
+      const response = await fetch( `${API}`)
+      const data = await response.json()
 
       store.allnotes = data.map((result) => {
         return {
@@ -27,7 +27,7 @@ export const store = {
 //   Post New Note 
   export const PostNote = async function () {
     try {
-    const data = await fetch( `${API}`, {
+    const response = await fetch( `${API}`, {
         method: "POST",
         headers: {
             'Accept' : 'application/json',
@@ -36,8 +36,8 @@ export const store = {
         body: JSON.stringify({
         "content": addNoteTextArea.value,
     }),
-    }).then((res) => res.json())
-
+    })
+    const data = await response.json()
         view.generateNote(data)
     } catch (err) {
      throw err
@@ -46,10 +46,11 @@ export const store = {
 //   Delete Note 
   export const deleteNote = async function (id) {
     try {
-     await fetch(`${API}/${id}`, {
+     const response = await fetch(`${API}/${id}`, {
     method: "DELETE",
         }
-      ).then((res) => res.json());
+      )
+      const data = await response.json()
     } catch (err) {
     throw err
     }
@@ -58,7 +59,7 @@ export const store = {
 //   Change backgroundColor 
 export const changeNoteBackground = async function (id, backgroundColor) {
     try {
-    const data = await fetch(`${API}/${id}`, {
+    const response = await fetch(`${API}/${id}`, {
         method: "PUT",
         headers: {
             'Accept' : 'application/json',
@@ -67,8 +68,8 @@ export const changeNoteBackground = async function (id, backgroundColor) {
         body: JSON.stringify({
         "backgroundColor": backgroundColor,
     }),
-    }).then((res) => res.json())
-    // console.log(data)
+    })
+    const data = await response.json()
     const noteElement = document.getElementById(id)
     if (noteElement) {
       noteElement.style.backgroundColor = data.backgroundColor;

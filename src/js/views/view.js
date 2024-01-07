@@ -57,8 +57,11 @@ export const generateAllNote = function(data) {
                 <div class="d_year">${el.title.slice(0,4)}</div>
             </div>
             <div class="note_tools">
-                <div class="note_color">
-                    <input class="note_edit" type="color" value="${el.backgroundColor}" id=${el.id}>
+                <div class="note_color" id="${el.id}"> 
+                    <div class="note_edit color_picker_trigger">
+                    <i class="fa-solid fa-paintbrush"></i>
+                    </div>
+                    <input class="inputColor" type="color" value="${el.backgroundColor}" id="colorPicker_${el.id}" style="display: none;">
                 </div>
                 <div class="note_del" id=${el.id}>
                 <i class="fa-solid fa-trash-can"></i>
@@ -94,10 +97,13 @@ export const deleteHandler = function (handler) {
     })
 }
 
-export const changeBGhandler = function (handler) {
-    noteCon.addEventListener('input', (e) => {
-        const btn = e.target.closest('.note_edit');
-        if (!btn) return;
-        handler(btn.id, btn.value)
-    })
-}
+// export const changeBGhandler = function (handler) {
+//     noteCon.addEventListener('input', (e) => {
+//         const btn = e.target.closest('.note_edit');
+//         if (!btn) return;
+//         handler(btn.id, btn.value)
+//     })
+// }
+
+
+

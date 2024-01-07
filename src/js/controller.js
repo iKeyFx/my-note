@@ -1,5 +1,6 @@
 import * as model from "./model.js";
 import * as view from "./views/view.js"
+import * as BGview from "./views/BGview.js"
 // Element 
 const noteAddedSuccessful = document.querySelector('.note_added--container')
 const addNoteContainer = document.querySelector('.add_note--container')
@@ -7,13 +8,12 @@ const closeNoteBtn = document.querySelector('.new_note--close')
 const addCompleteBtn = document.querySelector('.add_note--btn')
 const inputFieldCl = document.querySelector('.clear_note--btn')
 const addNewNoteBtn = document.querySelector('.btn_add-note')
-const noteInputColor = document.querySelector('.note_edit')
-const headerTag = document.getElementById('header')
 const overLay = document.querySelector('.overlay')
 export const noteInner = document.querySelector('.note_inner')
 export const addNoteTextArea = document.querySelector('.textarea')
 export const noNoteHolder = document.querySelector('.no_note--holder')
 // Event
+
 addNewNoteBtn.addEventListener('click', () => {
     OpenAddNewNoteBtn()
     ChecktextArea()
@@ -22,10 +22,7 @@ addNewNoteBtn.addEventListener('click', () => {
 closeNoteBtn.addEventListener('click', () => {
     OpenAddNewNoteBtn()
     ClearInputField(addNoteTextArea.value)
-})  
-// addNoteTextArea.addEventListener('click', (e) => {
-//     inputFieldCl.style.display = "flex";
-// })
+}) 
 addNoteTextArea.addEventListener('focus', () => {
     inputFieldCl.style.display = "flex";
 })
@@ -87,6 +84,7 @@ const loadGenNote = async function () {
 const init = function () {
     loadGenNote()
     view.deleteHandler(controlEventDelete)
-    view.changeBGhandler(controlBGEvent)
+    BGview.changeBGhandler(controlBGEvent)
+    BGview.colorTriggers()
   };
   init();

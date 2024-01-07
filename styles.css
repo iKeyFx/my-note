@@ -144,6 +144,8 @@ header {
     cursor: pointer; 
 }
 .note_color input {
+    width: 0px;
+    height: 0px;
     z-index: -5;
 }
 .note_edit i {

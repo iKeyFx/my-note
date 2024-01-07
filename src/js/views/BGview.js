@@ -8,11 +8,11 @@ export const colorTriggers = function () {
         const colorPicker = document.getElementById(`colorPicker_${noteId}`);
     
             if (colorPicker) {
-                const rect = e.target.getBoundingClientRect();
-                colorPicker.style.position = 'absolute';
-                colorPicker.style.left = `${rect.left}px / 2`;
-                colorPicker.style.top = `${rect.bottom}px / 2`;
-                colorPicker.style.display = 'block'; 
+                // const rect = e.target.getBoundingClientRect();
+                // colorPicker.style.position = 'absolute';
+                // colorPicker.style.left = `${rect.left}px / 2`;
+                // colorPicker.style.top = `${rect.bottom}px / 2`;
+                // colorPicker.style.display = 'block'; 
                 colorPicker.click(); 
             }
         

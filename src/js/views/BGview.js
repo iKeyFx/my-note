@@ -2,14 +2,13 @@ import { noteCon } from "./view.js";
 
 export const colorTriggers = function () {
     noteCon.addEventListener('click', (e) => {
-        const note = e.target.closest('.note_inner');
+        const note = e.target.closest('.note_color');
         if (!note) return
         const noteId = note.id
         const colorPicker = document.getElementById(`colorPicker_${noteId}`);
     
             if (colorPicker) {
-                // const rect = e.target.getBoundingClientRect();
-                const rect = note.getBoundingClientRect();
+                const rect = e.target.getBoundingClientRect();
                 colorPicker.style.position = 'absolute';
                 colorPicker.style.left = `${rect.left}px / 2`;
                 colorPicker.style.top = `${rect.bottom}px / 2`;

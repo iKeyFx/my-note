@@ -24,9 +24,12 @@ export const generateNote = function(data) {
         <div class="d_year">${data.createdAt.slice(0,4)}</div>
         </div>
         <div class="note_tools">
-            <div class="note_color" id=${data.id}>
-                <input class="note_edit" type="color" value="${data.backgroundColor}" id=${data.id}>
-            </div>
+            <div class="note_color" id="${data.id}"> 
+                <div class="note_edit color_picker_trigger">
+                    <i class="fa-solid fa-paintbrush"></i>
+                </div>
+            <input class="inputColor" type="color" value="${data.backgroundColor}" id="colorPicker_${data.id}" style="display: none;">
+        </div>
             <div class="note_del" id=${data.id}>
             <i class="fa-solid fa-trash-can"></i>
             </div>

@@ -11,7 +11,7 @@ export const colorTriggers = function () {
                 // const rect = e.target.getBoundingClientRect();
                 const rect = e.target.getBoundingClientRect();
                 colorPicker.style.position = 'absolute';
-                colorPicker.style.left = `${rect.left}px / 2`;
+                colorPicker.style.left = `${rect.left}px / 20`;
                 colorPicker.style.top = `${rect.bottom}px / 2`;
                 colorPicker.style.display = 'flex'; // Show the color picker
                 colorPicker.click(); // Trigger the click event on the color picker input

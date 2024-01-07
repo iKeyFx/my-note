@@ -403,10 +403,6 @@ textarea:focus {
         font-size: 12px;
         line-height: 18px;
     }  
-    .note_edit i {
-        width: 12px;
-        height: 12px;
-    }
     .note_del i {
         width: 12px;
         height: 12px;

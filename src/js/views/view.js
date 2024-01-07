@@ -97,13 +97,4 @@ export const deleteHandler = function (handler) {
     })
 }
 
-// export const changeBGhandler = function (handler) {
-//     noteCon.addEventListener('input', (e) => {
-//         const btn = e.target.closest('.note_edit');
-//         if (!btn) return;
-//         handler(btn.id, btn.value)
-//     })
-// }
-
-
 

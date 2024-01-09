@@ -86,6 +86,9 @@ header {
 .container {
     margin-top: 16px;
 }
+.note_inner--mob {
+    display: none;
+}
 .note_inner {
     border-radius: 16px;
     width: 316px;
@@ -108,6 +111,8 @@ header {
     justify-content: space-between;
     position: absolute;
     bottom: 10%;
+    left: 4%;
+    right: 4%;
 }
 .note_date {
     display: flex;
@@ -146,7 +151,7 @@ header {
 .note_color input {
     width: 0px;
     height: 0px;
-    z-index: 5;
+    z-index: -5;
 }
 .note_edit i {
     margin: 8px;
@@ -348,6 +353,9 @@ textarea:focus {
     backdrop-filter: blur(0.01px);
     z-index: 5;
   }
+  .inputColor {
+    display: none;
+  }
   @media screen and (max-width: 1300px) {
     body {
         padding: 0px 50px 62px 50px;
@@ -399,13 +407,19 @@ textarea:focus {
     .note_tools {
         margin-left: 3.5rem;
     }
+    .note_color input {
+        width: 0px;
+        height: 0px;
+        z-index: -5;
+    }
     .note_date {
         font-size: 12px;
         line-height: 18px;
+        margin-left: 10px;
     }  
     .note_del i {
-        width: 12px;
-        height: 12px;
+        width: 14px;
+        height: 14px;
     }
     .btn_add-note img {
         width: 18px;
@@ -429,6 +443,16 @@ textarea:focus {
         padding: 66px 0px px 13px;
         margin: 0 16px;
     }
+    .note_color input {
+        width: 30px;
+        height: 30px;
+        z-index: 5;
+        margin-right: 10px;
+    }
+    .inputColor {
+        display: block;
+      
+      }
     .no_note--holder h3 {
         font-size: 12px;
     }
@@ -463,6 +487,12 @@ textarea:focus {
         color: var(--cl--black);
         font-size: 14px;
         line-height: 20px;
+    }
+    .note_down {
+        right: 5%;
+    }
+    .note_edit {
+        display: none;
     }
     .note_date {
         line-height: 13px;

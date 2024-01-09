@@ -64,7 +64,7 @@ export const generateAllNote = function(data) {
                     <div class="note_edit color_picker_trigger">
                     <i class="fa-solid fa-paintbrush"></i>
                     </div>
-                    <input class="inputColor" type="color" value="${el.backgroundColor}" id="colorPicker_${el.id}" style="display: none;">
+                    <input class="inputColor" type="color" value="${el.backgroundColor}" id="colorPicker_${el.id}">
                 </div>
                 <div class="note_del" id=${el.id}>
                 <i class="fa-solid fa-trash-can"></i>

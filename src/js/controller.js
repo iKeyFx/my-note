@@ -37,7 +37,6 @@ addCompleteBtn.addEventListener('click', () => {
         noteAddedSuccessful.classList.add('hidden')
         overLay.classList.toggle('hidden') 
         model.PostNote()
-        // view.generateNote(model.PostNote)
         ClearInputField(addNoteTextArea.value)
     }, 2000);   
 })

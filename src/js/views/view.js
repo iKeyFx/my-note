@@ -1,4 +1,4 @@
-import { noNoteHolder } from "../controller.js";
+import { noNoteHolder, overLay } from "../controller.js";
 export const genNoteContainer = document.querySelector('.note_con');
 export const noteArray = []
 const month = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
@@ -87,9 +87,13 @@ export const deleteHandler = function (handler) {
         if (!btn) return;
         const noteId = btn.id.split("_")[1];
         const clickedNote = document.getElementById(`notedel_${noteId}`);
+        const isMobileDevice = window.innerWidth < 768;
+        if (isMobileDevice) {
         const rect = clickedNote.getBoundingClientRect();
         const yPos = rect.top + window.scrollY;
         confirmDetele.style.top = `${yPos - 300}px`;
+}
+        overLay.classList.toggle('hidden')
         confirmDetele.classList.remove('hidden')
         delYES.addEventListener('click', () => {
             handler(noteId)
@@ -99,6 +103,7 @@ export const deleteHandler = function (handler) {
         } )
         delCancel.addEventListener('click', () => {
             confirmDetele.classList.add('hidden')
+            overLay.classList.add('hidden')
         } )
         
     })

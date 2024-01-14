@@ -59,7 +59,6 @@ export const store = {
 //   Change backgroundColor 
 export const changeNoteBackground = async function (id, backgroundColor) {
     try {
-      console.log(id, backgroundColor)
     const response = await fetch(`${API}/${id}`, {
         method: "PUT",
         headers: {

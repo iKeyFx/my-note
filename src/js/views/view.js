@@ -30,7 +30,7 @@ export const generateNote = function(data) {
                 </div>
             <input class="inputColor" type="color" value="${data.backgroundColor}" id="colorPicker_${data.id}">
         </div>
-            <div class="note_del" id=${data.id}>
+            <div class="note_del" id="notedel_${el.id}">
             <i class="fa-solid fa-trash-can"></i>
             </div>
         </div>
@@ -66,7 +66,7 @@ export const generateAllNote = function(data) {
                     </div>
                     <input class="inputColor" type="color" value="${el.backgroundColor}" id="colorPicker_${el.id}">
                 </div>
-                <div class="note_del" id=${el.id}>
+                <div class="note_del" id="notedel_${el.id}">
                 <i class="fa-solid fa-trash-can"></i>
                 </div>
             </div>
@@ -86,6 +86,10 @@ export const deleteHandler = function (handler) {
         const btn = e.target.closest('.note_del')
         if (!btn) return;
         const noteId = btn.id
+        const clickedNote = document.getElementById(noteId);
+        const rect = clickedNote.getBoundingClientRect();
+        const yPos = rect.top + window.scrollY;
+        confirmDetele.style.top = `${yPos - 300}px`;
         confirmDetele.classList.remove('hidden')
         delYES.addEventListener('click', () => {
             handler(noteId)

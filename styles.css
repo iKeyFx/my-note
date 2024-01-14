@@ -536,7 +536,7 @@ textarea:focus {
     }
   
     .add_note--container, .note_added--container  {
-        top: 30%;
+        top: 12%;
         left: 50%;
     }
     .overlay {

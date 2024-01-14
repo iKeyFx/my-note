@@ -17,7 +17,9 @@ export const colorTriggers = function () {
             colorPicker.style.top = `${rect.bottom}px / 2`;
             colorPicker.style.display = 'block'; 
             colorPicker.click(); 
-        } else if (colorPicker && isMobileDevice) {
+        } 
+        else if (colorPicker && isMobileDevice)
+         {
             colorPicker.style.display = 'block'; 
             colorPicker.click(); 
         }
@@ -28,7 +30,6 @@ export const colorTriggers = function () {
 export const changeBGhandler = function (handler) {
     noteCon.addEventListener('input', (e) => {
         const colorPicker = e.target.closest('.inputColor');
-        console.log(colorPicker.id, colorPicker.value)
         if (colorPicker) {
             const colorPickerId = colorPicker.id.split("_")[1];
             handler(colorPickerId, colorPicker.value);

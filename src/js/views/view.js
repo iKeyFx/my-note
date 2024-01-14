@@ -30,7 +30,7 @@ export const generateNote = function(data) {
                 </div>
             <input class="inputColor" type="color" value="${data.backgroundColor}" id="colorPicker_${data.id}">
         </div>
-            <div class="note_del" id="notedel_${el.id}">
+            <div class="note_del" id="notedel_${data.id}">
             <i class="fa-solid fa-trash-can"></i>
             </div>
         </div>

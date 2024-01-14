@@ -85,8 +85,8 @@ export const deleteHandler = function (handler) {
     noteCon.addEventListener('click', function (e) {
         const btn = e.target.closest('.note_del')
         if (!btn) return;
-        const noteId = btn.id
-        const clickedNote = document.getElementById(noteId);
+        const noteId = btn.id.split("_")[1];
+        const clickedNote = document.getElementById(`notedel_${noteId}`);
         const rect = clickedNote.getBoundingClientRect();
         const yPos = rect.top + window.scrollY;
         confirmDetele.style.top = `${yPos - 300}px`;
